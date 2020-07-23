@@ -7,7 +7,7 @@ import { server } from "../store";
 export const getPeriod = (periodID) => async (dispatch) => {
   dispatch({ type: types.FETCH_PERIOD_REQUEST_GET });
   axios
-    .get(`http://${server}/api/periods/?search=${periodID}`)
+    .get(`${server}/api/periods/?search=${periodID}`)
     .then((res) => {
       dispatch({
         type: types.FETCH_PERIOD_SUCCESS_GET,
@@ -25,7 +25,7 @@ export const getPeriod = (periodID) => async (dispatch) => {
 export const getPeriodByStudent = (studentID) => async (dispatch) => {
   dispatch({ type: types.FETCH_PERIOD_REQUEST_GET });
   axios
-    .get(`http://${server}/api/studentsGet/?studentID=${studentID}`)
+    .get(`${server}/api/studentsGet/?studentID=${studentID}`)
     .then((res) => {
       const studentData = res.data[0];
       const course = studentData.course
@@ -38,7 +38,7 @@ export const getPeriodByStudent = (studentID) => async (dispatch) => {
         .sort((a, b) => b.startDate - a.startDate)[0];
       const periodID = course.period.id;
       axios
-        .get(`http://${server}/api/periods/${periodID}`)
+        .get(`${server}/api/periods/${periodID}`)
         .then((res) => {
           const periodData = res.data;
           dispatch({
@@ -64,7 +64,7 @@ export const getPeriodByStudent = (studentID) => async (dispatch) => {
 export const getPeriodByStaff = (staffID) => async (dispatch) => {
   dispatch({ type: types.FETCH_PERIOD_REQUEST_GET });
   axios
-    .get(`http://${server}/api/staffsGet/${staffID}`)
+    .get(`${server}/api/staffsGet/${staffID}`)
     .then((res) => {
       const staffData = res.data;
       const course = staffData.course
@@ -77,7 +77,7 @@ export const getPeriodByStaff = (staffID) => async (dispatch) => {
         .sort((a, b) => b.startDate - a.startDate)[0];
       const periodID = course.period.id;
       axios
-        .get(`http://${server}/api/periods/${periodID}`)
+        .get(`${server}/api/periods/${periodID}`)
         .then((res) => {
           const periodData = res.data;
           dispatch({
@@ -103,7 +103,7 @@ export const getPeriodByStaff = (staffID) => async (dispatch) => {
 export const getPeriodByCourse = (courseID) => async (dispatch) => {
   dispatch({ type: types.FETCH_PERIOD_REQUEST_GET });
   axios
-    .get(`http://${server}/api/coursesGet/${courseID}`)
+    .get(`${server}/api/coursesGet/${courseID}`)
     .then((res) => {
       const periodData = res.data.period;
       dispatch({
@@ -122,7 +122,7 @@ export const getPeriodByCourse = (courseID) => async (dispatch) => {
 export const getPeriodList = () => async (dispatch) => {
   dispatch({ type: types.FETCH_PERIOD_REQUEST_GET });
   axios
-    .get(`http://${server}/api/periods/`)
+    .get(`${server}/api/periods/`)
     .then((res) => {
       // console.log(res.data);
       dispatch({
@@ -142,7 +142,7 @@ export const postPeriod = (newPeriodData) => async (dispatch) => {
   dispatch({ type: types.FETCH_PERIOD_REQUEST_POST });
 
   axios
-    .post(`http://${server}/api/periods/`, JSON.stringify(newPeriodData), {
+    .post(`${server}/api/periods/`, JSON.stringify(newPeriodData), {
       headers: {
         "Content-Type": "application/json",
       },
@@ -166,7 +166,7 @@ export const putPeriod = (editedPeriodData, periodID) => async (dispatch) => {
 
   axios
     .put(
-      `http://${server}/api/periods/${periodID}/`,
+      `${server}/api/periods/${periodID}/`,
       JSON.stringify(editedPeriodData),
       {
         headers: {
@@ -192,7 +192,7 @@ export const deletePeriod = (periodID) => async (dispatch) => {
   dispatch({ type: types.FETCH_PERIOD_REQUEST_DELETE });
 
   axios
-    .delete(`http://${server}/api/periods/${periodID}/`)
+    .delete(`${server}/api/periods/${periodID}/`)
     .then((res) => {
       dispatch({
         type: types.FETCH_PERIOD_SUCCESS_DELETE,

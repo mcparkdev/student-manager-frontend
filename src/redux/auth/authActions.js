@@ -43,7 +43,7 @@ export const checkAuthTimeout = (expirationTime) => async (dispatch) => {
 export const authLogin = (username, password) => async (dispatch) => {
   dispatch(authStart());
   axios
-    .post(`http://${server}/rest-auth/login/`, { username, password })
+    .post(`${server}/rest-auth/login/`, { username, password })
     .then((res) => {
       const token = res.data.key;
       console.log(token);

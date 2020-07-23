@@ -32,7 +32,7 @@ export default function StaffCreate(props) {
       uid: "1",
       name: "기본 프로필.png",
       status: "done",
-      url: `http://${server}/media/Anonymous-Avatar.png`,
+      url: `${server}/media/Anonymous-Avatar.png`,
     },
   ]);
   const [staffOcupation, setStaffOcupation] = useState("대학생");

@@ -7,7 +7,7 @@ import { server } from "../store";
 export const getStaff = (staffID) => async (dispatch) => {
   dispatch({ type: types.FETCH_STAFF_REQUEST_GET });
   axios
-    .get(`http://${server}/api/staffsGet/?id=${staffID}`)
+    .get(`${server}/api/staffsGet/?id=${staffID}`)
     .then((res) => {
       dispatch({
         type: types.FETCH_STAFF_SUCCESS_GET,
@@ -25,12 +25,12 @@ export const getStaff = (staffID) => async (dispatch) => {
 export const getStaffByStudent = (studentID) => async (dispatch) => {
   dispatch({ type: types.FETCH_STAFF_REQUEST_GET });
   axios
-    .get(`http://${server}/api/studentsGet/?studentID=${studentID}`)
+    .get(`${server}/api/studentsGet/?studentID=${studentID}`)
     .then((res) => {
       const studentData = res.data[0];
       const courseID = studentData.course[0].id;
       axios
-        .get(`http://${server}/api/staffsGet/?course__id=${courseID}`)
+        .get(`${server}/api/staffsGet/?course__id=${courseID}`)
         .then((res) => {
           const staffData = res.data[0];
           dispatch({
@@ -56,7 +56,7 @@ export const getStaffByStudent = (studentID) => async (dispatch) => {
 export const getStaffByCourse = (courseID) => async (dispatch) => {
   dispatch({ type: types.FETCH_STAFF_REQUEST_GET });
   axios
-    .get(`http://${server}/api/staffsGet/?course__id=${courseID}`)
+    .get(`${server}/api/staffsGet/?course__id=${courseID}`)
     .then((res) => {
       const staffData = res.data[0];
 
@@ -76,7 +76,7 @@ export const getStaffByCourse = (courseID) => async (dispatch) => {
 export const getStaffListByPeriod = (periodID) => async (dispatch) => {
   dispatch({ type: types.FETCH_STAFFLIST_REQUEST_GET });
   axios
-    .get(`http://${server}/api/staffsGet/?course__period__id=${periodID}`)
+    .get(`${server}/api/staffsGet/?course__period__id=${periodID}`)
     .then((res) => {
       const staffList = res.data
         .map((staff) => {
@@ -102,7 +102,7 @@ export const getStaffListByPeriod = (periodID) => async (dispatch) => {
 export const getStaffList = () => async (dispatch) => {
   dispatch({ type: types.FETCH_STAFF_REQUEST_GET });
   axios
-    .get(`http://${server}/api/staffsGet/`)
+    .get(`${server}/api/staffsGet/`)
     .then((res) => {
       // console.log(res.data);
       dispatch({
@@ -122,7 +122,7 @@ export const postStaff = (newStaffData) => async (dispatch) => {
   dispatch({ type: types.FETCH_STAFF_REQUEST_POST });
   // console.log(newStaffData);
   axios
-    .post(`http://${server}/api/staffs/`, JSON.stringify(newStaffData), {
+    .post(`${server}/api/staffs/`, JSON.stringify(newStaffData), {
       headers: {
         //   "Content-Type": "multipart/form-data",
         "Content-Type": "application/json",
@@ -130,7 +130,7 @@ export const postStaff = (newStaffData) => async (dispatch) => {
     })
     .then((responsePOST) => {
       axios
-        .get(`http://${server}/api/staffsGet/${responsePOST.data.id}`)
+        .get(`${server}/api/staffsGet/${responsePOST.data.id}`)
         .then((responseGET) => {
           dispatch({
             type: types.FETCH_STAFF_SUCCESS_POST,
@@ -156,18 +156,14 @@ export const putStaff = (editedStaffData, staffID) => async (dispatch) => {
   dispatch({ type: types.FETCH_STAFF_REQUEST_PUT });
 
   axios
-    .put(
-      `http://${server}/api/staffs/${staffID}/`,
-      JSON.stringify(editedStaffData),
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-        // headers: {
-        //   "Content-Type": "multipart/form-data",
-        // },
-      }
-    )
+    .put(`${server}/api/staffs/${staffID}/`, JSON.stringify(editedStaffData), {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      // headers: {
+      //   "Content-Type": "multipart/form-data",
+      // },
+    })
     .then((res) => {
       dispatch({
         type: types.FETCH_STAFF_SUCCESS_PUT,
@@ -186,7 +182,7 @@ export const deleteStaff = (staffID) => async (dispatch) => {
   dispatch({ type: types.FETCH_STAFF_REQUEST_DELETE });
 
   axios
-    .delete(`http://${server}/api/staffs/${staffID}/`)
+    .delete(`${server}/api/staffs/${staffID}/`)
     .then((res) => {
       dispatch({
         type: types.FETCH_STAFF_SUCCESS_DELETE,

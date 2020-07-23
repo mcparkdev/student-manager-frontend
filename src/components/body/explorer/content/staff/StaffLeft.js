@@ -7,7 +7,7 @@ import LeftSection from "../LeftSection";
 export default function StaffLeft(props) {
   const profileImage = props.staffData.profileImage;
   const courseList = props.currentCourseList;
-
+  console.log(props);
   return (
     <BodyContentLeft data={courseList} profileImage={profileImage}>
       <div className="content-left-current">

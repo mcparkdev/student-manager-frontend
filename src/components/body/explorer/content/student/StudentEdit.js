@@ -36,7 +36,7 @@ export default function StudentEdit(props) {
       uid: "1",
       name: "기본 프로필.png",
       status: "done",
-      url: `http://${server}/media/Anonymous-Avatar.png`,
+      url: `${server}/media/Anonymous-Avatar.png`,
     },
   ]);
   const [studentOcupation, setStudentOcupation] = useState("학생");

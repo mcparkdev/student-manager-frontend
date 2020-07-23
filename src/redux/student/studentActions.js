@@ -7,7 +7,7 @@ import { server } from "../store";
 export const getStudent = (studentID) => async (dispatch) => {
   dispatch({ type: types.FETCH_STUDENT_REQUEST_GET });
   axios
-    .get(`http://${server}/api/studentsGet/${studentID}`)
+    .get(`${server}/api/studentsGet/${studentID}`)
     .then((res) => {
       const studentData = res.data[0];
       dispatch({
@@ -26,7 +26,7 @@ export const getStudent = (studentID) => async (dispatch) => {
 export const getStudentList = () => async (dispatch) => {
   dispatch({ type: types.FETCH_STUDENT_REQUEST_GET });
   axios
-    .get(`http://${server}/api/studentsGet/`)
+    .get(`${server}/api/studentsGet/`)
     .then((res) => {
       // console.log(res.data);
       dispatch({
@@ -45,7 +45,7 @@ export const getStudentList = () => async (dispatch) => {
 export const getStudentListByStaff = (staffID) => async (dispatch) => {
   dispatch({ type: types.FETCH_STUDENTLIST_REQUEST_GET });
   axios
-    .get(`http://${server}/api/staffsGet/${staffID}`)
+    .get(`${server}/api/staffsGet/${staffID}`)
     .then((res) => {
       const staffData = res.data;
       const course = staffData.course
@@ -58,7 +58,7 @@ export const getStudentListByStaff = (staffID) => async (dispatch) => {
         .sort((a, b) => b.startDate - a.startDate)[0];
       const courseID = course.id;
       axios
-        .get(`http://${server}/api/studentsGet/?course__id=${courseID}`)
+        .get(`${server}/api/studentsGet/?course__id=${courseID}`)
         .then((res) => {
           const studentList = res.data;
           dispatch({
@@ -84,7 +84,7 @@ export const getStudentListByStaff = (staffID) => async (dispatch) => {
 export const getStudentListByPeriod = (periodID) => async (dispatch) => {
   dispatch({ type: types.FETCH_STUDENTLIST_REQUEST_GET });
   axios
-    .get(`http://${server}/api/studentsGet/?course__period__id=${periodID}`)
+    .get(`${server}/api/studentsGet/?course__period__id=${periodID}`)
     .then((res) => {
       const studentList = res.data;
       dispatch({
@@ -104,7 +104,7 @@ export const getStudentListByCourse = (courseID) => async (dispatch) => {
   dispatch({ type: types.FETCH_STUDENTLIST_REQUEST_GET });
 
   axios
-    .get(`http://${server}/api/studentsGet/?course__id=${courseID}`)
+    .get(`${server}/api/studentsGet/?course__id=${courseID}`)
     .then((res) => {
       const studentList = res.data;
       dispatch({
@@ -124,14 +124,14 @@ export const postStudent = (newStudentData) => async (dispatch) => {
   dispatch({ type: types.FETCH_STUDENT_REQUEST_POST });
 
   axios
-    .post(`http://${server}/api/students/`, JSON.stringify(newStudentData), {
+    .post(`${server}/api/students/`, JSON.stringify(newStudentData), {
       headers: {
         "Content-Type": "application/json",
       },
     })
     .then((responsePOST) => {
       axios
-        .get(`http://${server}/api/studentsGet/${responsePOST.data.id}`)
+        .get(`${server}/api/studentsGet/${responsePOST.data.id}`)
         .then((responseGET) => {
           dispatch({
             type: types.FETCH_STUDENT_SUCCESS_POST,
@@ -160,7 +160,7 @@ export const putStudent = (editedStudentData, studentID) => async (
 
   axios
     .put(
-      `http://${server}/api/students/${studentID}/`,
+      `${server}/api/students/${studentID}/`,
       JSON.stringify(editedStudentData),
       {
         headers: {
@@ -186,7 +186,7 @@ export const deleteStudent = (studentID) => async (dispatch) => {
   dispatch({ type: types.FETCH_STUDENT_REQUEST_DELETE });
 
   axios
-    .delete(`http://${server}/api/students/${studentID}/`)
+    .delete(`${server}/api/students/${studentID}/`)
     .then((res) => {
       dispatch({
         type: types.FETCH_STUDENT_SUCCESS_DELETE,
