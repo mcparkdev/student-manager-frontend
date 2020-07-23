@@ -13,6 +13,7 @@ export default function StudentLeft(props) {
   // console.log(profileImage);
   const courseData = props.studentData.course[0];
   const staff = courseData.staff;
+  console.log(profileImage);
   // console.log(props.studentData);
   return (
     <BodyContentLeft data={props.courseList} profileImage={profileImage}>
