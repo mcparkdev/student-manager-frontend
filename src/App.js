@@ -111,6 +111,7 @@ const mapStateToProps = (state) => ({
   isAuthenticated: state.auth.token !== null && state.auth.token !== undefined,
   token: state.auth.token,
   error: state.auth.error,
+  loadingLogin: state.auth.loading,
 });
 
 const mapDispatchToProps = (dispatch) => {

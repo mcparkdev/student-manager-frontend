@@ -59,7 +59,9 @@ class Login extends Component {
             <LoginSearch allowClear placeholder="암호" />
           </Form.Item>
         </Form>
-        <LoadingOutlined style={{ fontSize: "24px" }} />
+        {this.props.loadingLogin && (
+          <LoadingOutlined style={{ fontSize: "24px" }} />
+        )}
       </div>
     );
   }
