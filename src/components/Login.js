@@ -60,7 +60,9 @@ class Login extends Component {
           </Form.Item>
         </Form>
         {this.props.loadingLogin && (
-          <LoadingOutlined style={{ fontSize: "24px" }} />
+          <>
+            Logging in <LoadingOutlined style={{ fontSize: "24px" }} />
+          </>
         )}
       </div>
     );
