@@ -108,11 +108,11 @@ export default function CourseCreate(props) {
           <Col span={12}>
             <Form.Item
               name="courseName"
-              label="강의명"
-              rules={[{ required: true, message: "강의명을 선택해주세요" }]}
+              label="수업명"
+              rules={[{ required: true, message: "수업명을 선택해주세요" }]}
             >
               <Cascader
-                placeholder="강의명을 선택해주세요"
+                placeholder="수업명을 선택해주세요"
                 expandTrigger="hover"
                 options={courseOption}
                 displayRender={displayRender}
@@ -153,9 +153,9 @@ export default function CourseCreate(props) {
           <Col span={12}>
             <Form.Item
               name="courseTimeRange"
-              label="강의 강의시간"
+              label="수업 수업시간"
               rules={[
-                { required: true, message: "강의 강의시간를 선택해주세요" },
+                { required: true, message: "수업 수업시간를 선택해주세요" },
               ]}
             >
               <RangePickerTime />
@@ -164,8 +164,8 @@ export default function CourseCreate(props) {
           <Col>
             <Form.Item
               name="courseFee"
-              label="등록금"
-              rules={[{ required: true, message: "강의 등록금 입력해주세요" }]}
+              label="수업료"
+              rules={[{ required: true, message: "수업 수업료 입력해주세요" }]}
             >
               <InputNumber
                 formatter={(value) =>
@@ -181,8 +181,8 @@ export default function CourseCreate(props) {
           <Col>
             <Form.Item
               name="courseSalary"
-              label="강사 활동비"
-              rules={[{ required: true, message: "활동비를 입력해주세요" }]}
+              label="교사 봉사료"
+              rules={[{ required: true, message: "봉사료를 입력해주세요" }]}
             >
               <InputNumber
                 formatter={(value) =>

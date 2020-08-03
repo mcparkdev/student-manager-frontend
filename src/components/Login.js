@@ -25,7 +25,7 @@ class Login extends Component {
     console.log("Failed:", errorInfo);
   };
   checkPassword = (rule, value) => {
-    this.props.onAuth("SuperAdmin", value);
+    this.props.onAuth("cccadmin", value);
     if (this.props.token !== undefined && this.props.token !== null) {
       // this.props.history.push("/");
       return Promise.resolve();

@@ -8,7 +8,7 @@ export default function StaffListLeft(props) {
   return (
     <BodyContentLeft data={staffList}>
       <div className="content-left-current">
-        <LeftSection title="강사">
+        <LeftSection title="교사">
           {staffList.map((staff, index) => {
             return <StaffItem {...props} key={index} staffData={staff} />;
           })}

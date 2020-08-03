@@ -119,12 +119,12 @@ class ContentSearch extends Component {
             },
             {
               label: renderTitle(
-                "강의",
+                "수업",
                 "courses",
                 this.filterArrayOfObjects(
                   this.props.courseList,
                   this.state.input,
-                  "강의"
+                  "수업"
                 ).length
               ),
               options: this.filterArrayOfObjects(
@@ -135,12 +135,12 @@ class ContentSearch extends Component {
             },
             {
               label: renderTitle(
-                "강사",
+                "교사",
                 "staffs",
                 this.filterArrayOfObjects(
                   this.props.staffList,
                   this.state.input,
-                  "강사"
+                  "교사"
                 ).length
               ),
               options: this.filterArrayOfObjects(

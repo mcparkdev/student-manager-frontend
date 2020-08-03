@@ -37,12 +37,12 @@ export default function PeriodItem(props) {
         <div className="current-section-item-content">
           <div className="current-section-item-content-inline">
             <div className="current-section-item-content-inline-text">
-              강의 수: <span>{totalCourses} 개</span>
+              수업 수: <span>{totalCourses} 개</span>
             </div>
           </div>
           <div className="current-section-item-content-inline">
             <div className="current-section-item-content-inline-text">
-              강사 수: <span>{totalStaffs} 명</span>
+              교사 수: <span>{totalStaffs} 명</span>
             </div>
           </div>
           <div className="current-section-item-content-inline">

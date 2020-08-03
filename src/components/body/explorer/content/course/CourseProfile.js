@@ -9,13 +9,13 @@ export default function CourseProfile(props) {
     courseData !== undefined
       ? {
           general: [
-            { key: "강의명", value: courseData.name },
+            { key: "수업명", value: courseData.name },
             {
               key: "학기",
               value: `${courseData.period.year}/${courseData.period.name}`,
             },
             {
-              key: "강의기간",
+              key: "수업기간",
               value: `${
                 new Date(courseData.period.startDate).getUTCMonth() + 1
               }.
@@ -25,7 +25,7 @@ export default function CourseProfile(props) {
               }.${new Date(courseData.period.endDate).getUTCDate()}`,
             },
             {
-              key: "강의시간",
+              key: "수업시간",
               value: `${courseData.startTime.substring(
                 0,
                 courseData.startTime.length - 3
@@ -35,12 +35,12 @@ export default function CourseProfile(props) {
               )}`,
             },
             {
-              key: "등록금",
+              key: "수업료",
               value: courseData.fee,
               number: true,
             },
             {
-              key: "강사 활동비",
+              key: "교사 봉사료",
               value: courseData.salary,
               number: true,
             },

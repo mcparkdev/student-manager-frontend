@@ -42,7 +42,7 @@ export default function StaffRight(props) {
           tab={
             <span>
               <FundProjectionScreenOutlined />
-              강의
+              수업
             </span>
           }
           key="3"

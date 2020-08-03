@@ -18,7 +18,7 @@ export default function StudentLeft(props) {
   return (
     <BodyContentLeft data={props.courseList} profileImage={profileImage}>
       <div className="content-left-current">
-        <LeftSection title="강의">
+        <LeftSection title="수업">
           <CourseItem
             studentList={props.studentList}
             courseData={props.studentData.course[0]}

@@ -61,8 +61,8 @@ class ExplorerSide extends Component {
       title: "기본관리",
       items: [
         { label: "학기", name: "period", icon: "far fa-calendar-alt" },
-        { label: "강의", name: "course", icon: "fas fa-book-open" },
-        { label: "강사", name: "staff", icon: "fas fa-chalkboard-teacher" },
+        { label: "수업", name: "course", icon: "fas fa-book-open" },
+        { label: "교사", name: "staff", icon: "fas fa-chalkboard-teacher" },
         { label: "학생", name: "student", icon: "fas fa-user-graduate" },
       ],
     };

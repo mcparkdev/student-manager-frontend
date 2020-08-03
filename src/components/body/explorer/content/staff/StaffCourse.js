@@ -22,10 +22,10 @@ export default function StaffCourse(props) {
   const data = (staffData, courseData) => {
     return {
       general: [
-        { key: "강의명", value: courseData.birthDate },
-        { key: "등록금", value: courseData.birthDate },
-        { key: "강사 활동비", value: courseData.englishName },
-        { key: "강의시간", value: courseData.birthDate },
+        { key: "수업명", value: courseData.birthDate },
+        { key: "수업료", value: courseData.birthDate },
+        { key: "교사 봉사료", value: courseData.englishName },
+        { key: "수업시간", value: courseData.birthDate },
         {
           key: "비고",
           value: courseData.comment ? courseData.comment : "없음",

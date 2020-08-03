@@ -57,23 +57,23 @@ export default function StaffRight(props) {
           tab={
             <span>
               <FundProjectionScreenOutlined />
-              강의
+              수업
             </span>
           }
           key="3"
         >
-          <div className="staff-courses">강의</div>
+          <div className="staff-courses">수업</div>
         </TabPane>
         <TabPane
           tab={
             <span>
               <FundProjectionScreenOutlined />
-              강사
+              교사
             </span>
           }
           key="4"
         >
-          <div className="staff-courses">강사</div>
+          <div className="staff-courses">교사</div>
         </TabPane>
         <TabPane
           tab={

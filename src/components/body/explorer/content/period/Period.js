@@ -108,7 +108,7 @@ class Period extends Component {
     //             value: `${periodData.year}/${periodData.name}`,
     //           },
     //           { key: "학생 수", value: `${studentList.length} 명` },
-    //           { key: "강사 수", value: `${staffList.length} 명` },
+    //           { key: "교사 수", value: `${staffList.length} 명` },
     //           {
     //             key: "납부현황",
     //             value: `${

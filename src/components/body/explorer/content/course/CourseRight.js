@@ -61,12 +61,12 @@ export default function CourseRight(props) {
                */}
               <AuditOutlined />
               {/* <i className="fas fa-chalkboard-teacher"/> */}
-              강사
+              교사
             </span>
           }
           key="3"
         >
-          <div className="staff-courses">강사</div>
+          <div className="staff-courses">교사</div>
         </TabPane>
         <TabPane
           tab={

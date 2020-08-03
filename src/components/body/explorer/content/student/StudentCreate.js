@@ -534,14 +534,14 @@ export default function StudentCreate(props) {
             </Col>
           </Row>
           <Row>
-            <div className="form-section-title">강의</div>
+            <div className="form-section-title">수업</div>
           </Row>
           <Row gutter={12}>
             <Col span={24}>
               <Form.Item
                 name="studentCourse"
-                label="강의"
-                rules={[{ required: true, message: "강의를 선택해주세요" }]}
+                label="수업"
+                rules={[{ required: true, message: "수업를 선택해주세요" }]}
               >
                 {/* <Tree
                   checkable
@@ -556,7 +556,7 @@ export default function StudentCreate(props) {
                 /> */}
                 <Select
                   mode="multiple"
-                  placeholder="강의를 선택하세요"
+                  placeholder="수업를 선택하세요"
                   allowClear
                   showSearch
                   filterOption={(input, option) =>

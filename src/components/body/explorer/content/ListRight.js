@@ -36,10 +36,10 @@ export default function ListRight(props) {
           학기기간: <span>{periodRange}</span>
         </div>
         <div className="content-right-main-periodCourses">
-          강의 수: <span>{totalCourses}</span>
+          수업 수: <span>{totalCourses}</span>
         </div>
         <div className="content-right-main-periodStaffs">
-          강사 수: <span>{totalStaffs}</span>
+          교사 수: <span>{totalStaffs}</span>
         </div>
         <div className="content-right-main-periodStudents">
           학생 수: <span>{totalStudents}</span>
@@ -62,7 +62,7 @@ export default function ListRight(props) {
           학기기간: <span>{periodRange}</span>
         </div>
         <div className="content-right-main-periodStaffs">
-          강사 수: <span>{totalStaffs}</span>
+          교사 수: <span>{totalStaffs}</span>
         </div>
         <div className="content-right-main-periodStudents">
           학생 수: <span>{totalStudents}</span>

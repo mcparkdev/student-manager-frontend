@@ -75,7 +75,7 @@ export default class StudentTable extends Component {
         ellipsis: true,
       },
       {
-        title: "강의명",
+        title: "수업명",
         dataIndex: "name",
         key: "name",
         filters: [

@@ -12,7 +12,7 @@ export default function PeriodListRight(props) {
       <ListRight
         {...props}
         data={props.currentCourseList}
-        name={"강의"}
+        name={"수업"}
         nameCounter={"개"}
         isList={true}
       >
@@ -37,7 +37,7 @@ export default function PeriodListRight(props) {
             }
             key="2"
           >
-            <BlockView title="강의명단">
+            <BlockView title="수업명단">
               <CourseTable {...props} />
             </BlockView>
           </TabPane>

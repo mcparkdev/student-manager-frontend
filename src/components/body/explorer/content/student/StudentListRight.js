@@ -37,7 +37,7 @@ export default function StudentListRight(props) {
           }
           key="2"
         >
-          <BlockView title="강사명단">
+          <BlockView title="교사명단">
             <StudentTable {...props} />
           </BlockView>
         </TabPane>

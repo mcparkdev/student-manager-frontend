@@ -152,7 +152,7 @@ export default class PeriodTable extends Component {
       //   ellipsis: true,
       // },
       // {
-      //   title: "강사 수",
+      //   title: "교사 수",
       //   dataIndex: "staffNum",
       //   key: "staffNum",
       //   render: (text) => `${text} 명`,
@@ -161,7 +161,7 @@ export default class PeriodTable extends Component {
       //   ellipsis: true,
       // },
       {
-        title: "학생 수입",
+        title: "총 수입",
         dataIndex: "income",
         key: "income",
         render: (text) => (
@@ -177,7 +177,7 @@ export default class PeriodTable extends Component {
         ellipsis: true,
       },
       {
-        title: "강사 비용",
+        title: "총 비용",
         dataIndex: "staffSalary",
         key: "staffSalary",
         render: (text) => (

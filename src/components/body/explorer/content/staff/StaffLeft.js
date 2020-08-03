@@ -11,7 +11,7 @@ export default function StaffLeft(props) {
   return (
     <BodyContentLeft data={courseList} profileImage={profileImage}>
       <div className="content-left-current">
-        <LeftSection title="강의">
+        <LeftSection title="수업">
           {courseList.map((course, index) => {
             return (
               <CourseItem

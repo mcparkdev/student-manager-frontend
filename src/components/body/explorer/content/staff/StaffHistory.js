@@ -79,7 +79,7 @@ class StaffHistory extends Component {
         ellipsis: true,
       },
       {
-        title: "강의명",
+        title: "수업명",
         dataIndex: "name",
         key: "name",
         filters: [
@@ -103,7 +103,7 @@ class StaffHistory extends Component {
         ellipsis: true,
       },
       {
-        title: "강의시간",
+        title: "수업시간",
         dataIndex: "timeRange",
         key: "timeRange",
         sorter: (a, b) => this.sortText(a.timeRange, b.timeRange),
@@ -111,7 +111,7 @@ class StaffHistory extends Component {
         ellipsis: true,
       },
       {
-        title: "강사 활동비",
+        title: "교사 봉사료",
         dataIndex: "salary",
         key: "salary",
         render: (text) => (

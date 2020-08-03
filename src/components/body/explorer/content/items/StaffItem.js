@@ -83,7 +83,7 @@ export default function StaffItem(props) {
         <div className="current-section-item-content">
           <div className="current-section-item-content-inline">
             <div className="current-section-item-content-inline-text">
-              강의명: <span>{courseName}</span>
+              수업명: <span>{courseName}</span>
             </div>
           </div>
           <div className="current-section-item-content-inline">

@@ -419,8 +419,8 @@ export default function StaffCreate(props) {
             <Col span={24}>
               <Form.Item
                 name="staffCourse"
-                label="강의"
-                rules={[{ required: true, message: "강의를 선택해주세요" }]}
+                label="수업"
+                rules={[{ required: true, message: "수업를 선택해주세요" }]}
               >
                 {/* <Tree
                   checkable
@@ -435,7 +435,7 @@ export default function StaffCreate(props) {
                 /> */}
                 <Select
                   mode="multiple"
-                  placeholder="강의를 선택하세요"
+                  placeholder="수업를 선택하세요"
                   allowClear
                   showSearch
                   filterOption={(input, option) =>

@@ -12,7 +12,7 @@ export default function StaffListRight(props) {
     <ListRight
       {...props}
       data={props.currentStaffList}
-      name="강사"
+      name="교사"
       nameCounter="명"
       isList={true}
     >
@@ -37,7 +37,7 @@ export default function StaffListRight(props) {
           }
           key="2"
         >
-          <BlockView title="강사명단">
+          <BlockView title="교사명단">
             <StaffTable {...props} />
           </BlockView>
         </TabPane>

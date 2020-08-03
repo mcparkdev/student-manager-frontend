@@ -23,7 +23,7 @@ export default function StudentItem(props) {
           </div>
           <div className="current-section-item-content-inline">
             <div className="current-section-item-content-inline-text">
-              강의: <span>{courseName}</span>
+              수업: <span>{courseName}</span>
             </div>
           </div>
         </div>

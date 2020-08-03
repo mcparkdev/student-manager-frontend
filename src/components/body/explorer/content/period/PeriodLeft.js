@@ -9,7 +9,7 @@ export default function PeriodLeft(props) {
   return (
     <BodyContentLeft data={props.periodList}>
       <div className="content-left-current">
-        <LeftSection title="강의">
+        <LeftSection title="수업">
           {props.currentCourseList.map((course, index) => {
             return (
               <CourseItem
